@@ -1,0 +1,933 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Mamaearth</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style media="screen">
+        .carousel-cell {
+          width: 100%;
+          }        
+          .carousel-cell:before {
+            display: block;
+            
+            }
+        
+      #topLeft {
+        color: white;
+        width: 400px;
+        height: 29px;
+        text-align: center;
+        justify-content: center;
+        padding-top: 10px;
+        font-size: 14px;
+        margin-left: 30px;
+        font-family: Roboto, Lato;
+        /* border: 1px solid green; */
+      }
+      #topright {
+        color: white;
+        width: 700px;
+        height: 29px;
+        text-align: center;
+
+        padding-top: 15px;
+        font-size: 14px;
+        margin-left: 550px;
+        /* border: 1px solid green; */
+        margin-top: -35px;
+        font-family: Roboto, Lato;
+      }
+      #toprow {
+        width: 1537px;
+        margin-left: -10px;
+        height: 31px;
+        background-color: rgb(212, 66, 76);
+        margin-top: -10px;
+      }
+
+      #nav {
+        width: 1537px;
+        margin-left: -10px;
+        height: 60px;
+        /* border: 1px solid black; */
+        display: inline-block;
+      }
+      #logoimg {
+        width: 150px;
+        margin-left: 125px;
+        margin-top: -32px;
+        vertical-align: top;
+        /* border: 1px solid red; */
+      }
+      #searchbox {
+        margin-left: 340px;
+        margin-top: 15px;
+        vertical-align: top;
+        width: 600px;
+        border-radius: 5px 5px 5px 5px;
+        height: 35px;
+        border: 1px solid rgb(175, 168, 168);
+        padding: 7px;
+        background-color: transparent;
+      }
+      #search {
+        /* border: 1px solid black; */
+        height: 35px;
+        border-radius: 0px 5px 5px 0px;
+        width: 85px;
+        margin-top: -35px;
+        margin-left: 855px;
+        background-color: rgb(0, 175, 239);
+        font-weight: 400;
+        font-family: Roboto;
+        color: white;
+        /* padding-top: 5px; */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        /* padding-left: 15px; */
+        gap: 7px;
+      }
+      #hr {
+        width: 1530px;
+        border: 0.1px solid rgb(241, 238, 238);
+        /* height: 1px; */
+        margin-left: -5px;
+        margin-top: -35px;
+      }
+      #searchicon {
+        width: 18px;
+        /* margin-top: 3px; */
+        color: white;
+        margin-left: 8px;
+        align-items: center;
+        /* vertical-align: middle; */
+        /* display:flex; */
+      }
+      #cart {
+        display: grid;
+        grid-template-rows: 40px 40px;
+        grid-template-columns: 70px 70px;
+        gap: 0px 5px;
+        margin-left: 1250px;
+        margin-top: -50px;
+        color: rgb(97, 73, 73);
+
+         
+        
+      }
+      #cart > div {
+        /* border: 1px solid red; */
+      }
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        color: rgba(56, 48, 48, 0.863);
+        font-family: "Roboto", sans-serif;
+        font-weight: 550;
+        font-size: 13px;
+        /* box-shadow: rgb(0 0 0 / 10%) 0px 3px 6px; */
+        line-height: 1.62;
+        margin-top: 8px;
+        align-content: center;
+        margin-left: 80px;
+      }
+      li {
+        list-style: none;
+      }
+      
+      #bestSeller{
+        display: flex;
+        /* border: 1px solid black; */
+        margin-top: 50px;
+        height:460px;
+        width:1300px;
+        margin-left: 200px;
+      }
+      #bestSeller > div{
+        border: dotted  rgb(219, 214, 214);
+        height: 460px;
+        width:305px;
+        margin-left: 10px;
+      }
+      .BS{
+         
+        text-align: center;
+        margin-top: 50px;
+        
+      }
+      .HBS{
+
+         text-align: center;
+        margin-top: 120px;
+      }
+      #view{
+         /* border: 1px solid black; */
+         height: 35px;
+         width:100px;
+         margin:auto;
+         color: white;
+         background-color: rgb(0,175,239);
+         border:none;
+         text-align: center;
+         padding-top:7px;
+         border-radius:5px;
+      }
+      .Bimg{
+        width:100%;
+        margin-top:0px;
+      }
+      .Bimg,p {
+        text-align: center;
+      }
+      .rating{
+        /* border: 1px solid black; */
+        width: 35px;
+        height: 20px;
+        margin: auto;
+        color: white;
+        background-color:rgb(109,165,35);
+        border:none;
+        border-radius: 5px;
+        text-align: center;
+        font-size:11px;
+        margin-top: -5px;
+        /* padding-top:5px; */
+        /* margin-top: -5px; */
+
+         vertical-align: middle;
+      }
+      #rate{
+        font-size: 9px;
+        margin-left: -2px;
+        text-align: middle;
+      }
+      #rupees{
+        color:black;
+        font-weight: 550;
+        font-size: 12px;
+        /* margin-top: 7px; */
+      }
+      .name{
+        font-size: 15px;
+        font-family: Lato;
+        margin-top:-10px;
+      }
+      .addToCart{
+        border: 2px solid rgb(228, 216, 216);
+        margin-left: -120px;
+        width:280px;
+        color: rgb(0,175,239);
+        height: 40px;
+        text-align: center;
+        font-weight: 530;
+        padding-top: 5px;
+        margin-top: 15px;
+        font-size: 14px;
+      }
+      .addToCart:hover{
+        background-color:rgb(0,175,239);
+        color: white;
+      }
+      #logIn:hover{
+        color:rgb(0,175,239);
+      }
+      #cartC:hover{
+        color:rgb(0,175,239);
+
+      }
+      #cartC{
+        /* border: 2px solid red; */
+        width:100px;
+        margin-left: -20px; 
+        /* text-align: center; */
+        /* background-color: rgb(0,175,239); */
+        /* color: white; */
+      }
+      
+      #logIn{
+        width:40px;
+        /* border: 1px solid black; */
+        display: inline-block; 
+         vertical-align: top; 
+        margin-left: 30px;
+        margin-top: -28px;
+
+      }
+  #logInPic{
+    margin-left: 70px;
+    margin-top: -42px;
+  }
+      .viewal{
+        height: 460px;
+        width:305px;
+        border:none !important;
+        margin-left: -100px;
+      
+      }
+      #space{
+        margin-top: 440px;
+      }
+      .absoluteImage{
+        position: absolute;
+        /* border: 1px solid black; */
+        height: 20px;
+        width: 90px;
+        background-color:tomato;
+        color: white;
+        font-family: Lato;
+        text-align: center;
+        border-radius: 5px 0 5px 0;
+        font-size:12px;
+        padding-bottom: 20px;
+        font-weight: 600;
+
+
+
+
+      }
+   
+    </style>
+  </head>
+
+    <div id="toprow">
+      <div id="topLeft">Asia's 1st Brand with MADE SAFE Certified Products</div>
+      <div id="topright">
+        Free Shipping Above 399|COD Available| Extra 5% OFF on Prepaid Orders|
+        Shop Now
+      </div>
+    </div>
+
+    <div id="nav">
+      <div>
+        <input id="searchbox" type="text" placeholder="Search for products.." />
+        <div id="search">
+        
+          
+            <span id="searchicon" class="material-icons">&#xe8b6;</span>
+          Search
+        </div>
+      </div>
+
+      <div>
+        <img
+          id="logoimg"
+          src="https://mamaearthp.imgix.net/wysiwyg/mamaearth-logo.png?auto=format&fit=scale"
+        />
+      </div>
+    </div>
+
+    <div id="cart">
+     
+      <div id="cartC">  <a href="./cart.html" style="text-decoration: none;">   <span style="color: rgb(0,175,239); font-size: 18px; display: inline-block; vertical-align: top" class="material-icons">&#xe8cc;</span> Cart <span id="spann">0 </span></div>
+      <div id="logInPic">
+      <a href="./signUp.html" style="text-decoration: none;"> <span  style =" color: rgb(0,175,239);" class="material-icons">&#xe7ff;</span> <div id="logIn">Login</div> </a>
+    </div>
+    </div>
+
+    <div id="hr"></div>
+
+    <div class="nav">
+      <ul>
+        <li>HOME</li>
+        <li>BABY</li>
+        <li>BEAUTY</li>
+        <li>HAIR</li>
+        <li>FACE</li>
+        <li>BODY</li>
+        <li>GIFT PACKS</li>
+        <li>ALL PRODUCTS</li>
+        <li>BLOG</li>
+        <li>PLANT GOODNESS</li>
+      </ul>
+    </div>
+
+    
+    <!-- <h1 class="w3-center">Simple Slider using Flickity Plugin By HACKERRAHUL</h1> -->
+    <div id ="cor">
+    <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true }'>
+      <div class="carousel-cell">
+        <img class="w3-image" src="https://images.ctfassets.net/66mrrren2unf/70N0bLdCNO5pVTN35fCaur/8e8c2252998e497f821c20e874f6efa5/Kids-Body-Lotion-_1920-512_with-CTA.jpg?q=40">
+      </div>
+      <div class="carousel-cell">
+        <img class="w3-image" src="https://images.ctfassets.net/66mrrren2unf/5zbrbL285t1I6Jzj6L5Vtt/b2e7017965c8b767d7b6826554c1a875/Desktop.jpg?q=40">
+      </div>
+      <div class="carousel-cell">
+        <img class="w3-image" src="https://images.ctfassets.net/66mrrren2unf/2eaJw2HNNTeF3RpOo0XGHZ/7dafb45833d9b7aed267e23607a31aaf/Desktop.jpg?q=40">
+      </div>
+    </div>
+    </div>
+
+ 
+  <div id = "bestSeller">
+  
+    <div class="viewal"> 
+      <h1 class ="HBS"> Best Sellers </h1>
+    <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+    <div id="view"> VIEW ALL</div>  
+  </div>
+
+    <div> 
+        <div class="absoluteImage"> BEST SELLER</div>
+      <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+   
+      <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+         <div id="ratingg" class = "rating">4.8 
+          <span id="rate" class="material-icons">&#xe838;</span>
+           <p id="rupees">₹399</p>
+           <div class="addToCart"> ADD TO CART</div>
+         </div>
+    </div>
+
+    <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+    "/>
+ 
+    <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+ </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+    
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  </div>
+
+  <!-- ....... Next Row   ...... -->
+   <div id = "bestSeller">
+  
+    <div class="viewal"> 
+      <h1 class ="HBS"> Best Sellers </h1>
+    <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+    <div id="view"> VIEW ALL</div>  
+  </div>
+
+    <div> 
+        <div class="absoluteImage"> BEST SELLER</div>
+      <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+   
+      <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+         <div class = "rating">4.8
+          <span id="rate" class="material-icons">&#xe838;</span>
+           <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+         </div>
+    </div>
+
+    <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+    "/>
+ 
+    <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+ </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+    
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  </div>
+
+
+  <!-- ...........................Next Row.............................. -->
+
+
+
+  <div id = "bestSeller">
+  
+    <div class="viewal"> 
+      <h1 class ="HBS"> Best Sellers </h1>
+    <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+    <div id="view"> VIEW ALL</div>  
+  </div>
+
+    <div> 
+        <div class="absoluteImage"> BEST SELLER</div>
+      <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+   
+      <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+         <div class = "rating">4.8
+          <span id="rate" class="material-icons">&#xe838;</span>
+           <p id="rupees">₹399</p>
+           <div class="addToCart"> ADD TO CART</div>
+         </div>
+    </div>
+
+    <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+    "/>
+ 
+    <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+ </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+    
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  </div>
+
+
+  <!-- .................................................... Next Row   ........................................... -->
+
+
+  <div id = "bestSeller">
+  
+    <div class="viewal"> 
+      <h1 class ="HBS"> Best Sellers </h1>
+    <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+    <div id="view"> VIEW ALL</div>  
+  </div>
+
+    <div> 
+        <div class="absoluteImage"> BEST SELLER</div>
+      <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+   
+      <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+         <div class = "rating">4.8
+          <span id="rate" class="material-icons">&#xe838;</span>
+           <p id="rupees">₹399</p>
+           <div class="addToCart"> ADD TO CART</div>
+         </div>
+    </div>
+
+    <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+    "/>
+ 
+    <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+ </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+    
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  </div>
+
+<!-- ..................................Next Row........................................... -->
+
+
+<div id = "bestSeller">
+  
+  <div class="viewal"> 
+    <h1 class ="HBS"> Best Sellers </h1>
+  <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+  <div id="view"> VIEW ALL</div>  
+</div>
+
+  <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+ 
+    <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  
+<div> 
+  <div class="absoluteImage"> BEST SELLER</div>
+<img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+"/>
+
+<p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+   <div class = "rating">4.8
+    <span id="rate" class="material-icons">&#xe838;</span>
+     <p id="rupees">₹399</p>
+     <div class="addToCart"> ADD TO CART</div>
+   </div>
+</div>
+</div>
+
+
+<!-- ..........................................NExt Row............................................................. -->
+
+
+<div id = "bestSeller">
+  
+  <div class="viewal"> 
+    <h1 class ="HBS"> Best Sellers </h1>
+  <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+  <div id="view"> VIEW ALL</div>  
+</div>
+
+  <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+ 
+    <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  
+<div> 
+  <div class="absoluteImage"> BEST SELLER</div>
+<img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+"/>
+
+<p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+   <div class = "rating">4.8
+    <span id="rate" class="material-icons">&#xe838;</span>
+     <p id="rupees">₹399</p>
+     <div class="addToCart"> ADD TO CART</div>
+   </div>
+</div>
+</div>
+
+
+<!-- ...................................Next Row....................................................... -->
+
+
+
+<div id = "bestSeller">
+  
+  <div class="viewal"> 
+    <h1 class ="HBS"> Best Sellers </h1>
+  <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+  <div id="view"> VIEW ALL</div>  
+</div>
+
+  <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+ 
+    <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  
+<div> 
+  <div class="absoluteImage"> BEST SELLER</div>
+<img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+"/>
+
+<p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+   <div class = "rating">4.8
+    <span id="rate" class="material-icons">&#xe838;</span>
+     <p id="rupees">₹399</p>
+     <div class="addToCart"> ADD TO CART</div>
+   </div>
+</div>
+</div>
+
+
+
+
+<!-- ..........................................................Next Row............................................................... -->
+
+
+
+<div id = "bestSeller">
+  
+  <div class="viewal"> 
+    <h1 class ="HBS"> Best Sellers </h1>
+  <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+  <div id="view"> VIEW ALL</div>  
+</div>
+
+  <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+ 
+    <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  
+<div> 
+  <div class="absoluteImage"> BEST SELLER</div>
+<img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+"/>
+
+<p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+   <div class = "rating">4.8
+    <span id="rate" class="material-icons">&#xe838;</span>
+     <p id="rupees">₹399</p>
+     <div class="addToCart"> ADD TO CART</div>
+   </div>
+</div>
+</div>
+
+
+<!-- ............................................................Next Row........................................................................ -->
+
+
+<div id = "bestSeller">
+  
+  <div class="viewal"> 
+    <h1 class ="HBS"> Best Sellers </h1>
+  <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+  <div id="view"> VIEW ALL</div>  
+</div>
+
+  <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+ 
+    <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  
+<div> 
+  <div class="absoluteImage"> BEST SELLER</div>
+<img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+"/>
+
+<p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+   <div class = "rating">4.8
+    <span id="rate" class="material-icons">&#xe838;</span>
+     <p id="rupees">₹399</p>
+     <div class="addToCart"> ADD TO CART</div>
+   </div>
+</div>
+</div>
+
+
+
+<!-- ................................................................Next Row......................................................................... -->
+
+
+
+<div id = "bestSeller">
+  
+  <div class="viewal"> 
+    <h1 class ="HBS"> Best Sellers </h1>
+  <p class="BS">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey.</p>  
+  <div id="view"> VIEW ALL</div>  
+</div>
+
+  <div> 
+      <div class="absoluteImage"> BEST SELLER</div>
+    <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400"/>
+ 
+    <p class="name">Onion Hair Oil for Hair Regrowth and Hiar Fall Control with Redndensyl, 150ml </p>
+       <div class = "rating">4.8
+        <span id="rate" class="material-icons">&#xe838;</span>
+         <p id="rupees">₹399</p>
+         <div class="addToCart"> ADD TO CART</div>
+       </div>
+  </div>
+
+  <div> 
+    <div class="absoluteImage"> BEST SELLER</div>
+  <img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1.jpg?auto=compress&fit=scale&w=400&h=400
+  "/>
+
+  <p class="name">Ubtan Face Wash with Turmeric & Saffron for Tan Removal- 100ml
+</p>
+     <div class = "rating">4.8
+      <span id="rate" class="material-icons">&#xe838;</span>
+       <p id="rupees">₹399</p>
+       <div class="addToCart"> ADD TO CART</div>
+     </div>
+</div>
+  
+<div> 
+  <div class="absoluteImage"> BEST SELLER</div>
+<img class ="Bimg" src="https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-foaming-face-wash-with-ingredients_85zdnmuke0xpfych.jpg?auto=compress&fit=scale&w=400&h=400
+"/>
+
+<p class="name">Tea Tree Foaming Face Wash with Tea Tree and Salicylic Acid for Acne and pimples
+
+</p>
+   <div class = "rating">4.8
+    <span id="rate" class="material-icons">&#xe838;</span>
+     <p id="rupees">₹399</p>
+     <div class="addToCart"> ADD TO CART</div>
+   </div>
+</div>
+</div> 
+
+
+<!-- .......................................................NExt Row.................................................................. -->
+
+    <div>
+      <img style = "height: 400px; width: 100%; margin-top: 20px;" src = "https://mamaearthp.imgix.net/wysiwyg/desktop_home_img.png?auto=format"/>
+    
+    </div>
+
+
+
+
+
+
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </body>
+</html>
+
+
+
+ <script src="main.js"></script> 
