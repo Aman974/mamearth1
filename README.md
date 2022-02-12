@@ -26,7 +26,7 @@
 
 ### Home Page
 
-![image](https://user-images.githubusercontent.com/76393496/150675291-fafc381d-8ccf-4a0a-9c95-effdb9237700.png)
+![image](https://github.com/Aman974/mamearth1/blob/main/screenshot/1.png)
 
 ### Products Page 
 
