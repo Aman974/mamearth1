@@ -30,7 +30,17 @@
 
 ### Products Page 
 
-![image](https://user-images.githubusercontent.com/76393496/150675333-f6a1468c-0951-4504-86f1-3c41fa1b0e27.png)
+![image](https://github.com/Aman974/mamearth1/blob/main/screenshot/2.png)
+
+### Sign-up Page 
+
+![image](https://github.com/Aman974/mamearth1/blob/main/screenshot/3.png)
+
+### Sign-in Page 
+
+![image](https://github.com/Aman974/mamearth1/blob/main/screenshot/4.png)
+
+
 
 
 
